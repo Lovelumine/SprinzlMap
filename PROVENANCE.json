@@ -1,0 +1,13 @@
+{
+  "source_repository": "https://github.com/Lovelumine/LLM-tRNAAlign",
+  "source_commit": "1e3189f1a6979c46d691bd29d74f3967294a9d48",
+  "export_date": "2026-10-28",
+  "scope": "Current backend, Vue source, benchmark harness, manuscript figure scripts, tests and numbering covariance models.",
+  "excluded": [
+    "runtime credentials",
+    "historic generation and readthrough model weights",
+    "large benchmark data and frozen run artifacts",
+    "binary manuscript and figure outputs",
+    "deployment-specific configuration"
+  ]
+}

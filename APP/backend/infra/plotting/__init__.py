@@ -1,0 +1,1 @@
+"""Infrastructure plotting helpers."""

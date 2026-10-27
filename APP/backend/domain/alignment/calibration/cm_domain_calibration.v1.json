@@ -1,0 +1,260 @@
+{
+  "artifact_sha256": "37ff2dab8dbf2e37abceb9521dad237bb84364ec15bc85a58d25322a4a6b8b89",
+  "artifact_type": "canonical_cm_domain_probability_calibrator",
+  "classes": [
+    "arch",
+    "bact",
+    "euk"
+  ],
+  "decision_thresholds": {
+    "below_threshold_disposition": "investigate",
+    "min_confidence": 0.65,
+    "min_probability_margin": 0.1
+  },
+  "feature_names": [
+    "arch_bit_score",
+    "bact_bit_score",
+    "euk_bit_score",
+    "all_bit_score",
+    "arch_average_posterior",
+    "bact_average_posterior",
+    "euk_average_posterior",
+    "all_average_posterior",
+    "top_domain_bit_score_margin",
+    "all_minus_top_domain_bit_score",
+    "sequence_length"
+  ],
+  "generated_at": "2026-07-13T05:54:17.811385+00:00",
+  "input_hashes": {
+    "case_manifest": "4c6a48aa34676c042e142200b6868e3a7b02b1e524b257935609a91542e2f512",
+    "cm_models": {
+      "all": "55a17fb2a3f62cff92f01f084c3347c080a0023cee9bb47e6d110f14deda73bf",
+      "arch": "e9d86b32b2f5dbf690b32eb083546fb100ea66aa1f990bacd752bd0d0bfc67b8",
+      "bact": "48f36f67e0380ea7172bec173f3b977e6e9695c6a78658449505248c6b2a5624",
+      "euk": "2e6ee14930be8e537e0d5054cd86216a1c135901cf3beb6d8fe974c0d2a0349b"
+    },
+    "gold": "6af753c3f80eaf5cc6b4b63bf1465609f8d3eee7d61ed58e61f026f08f84888f"
+  },
+  "model": {
+    "coefficients": [
+      [
+        3.64284982956,
+        -1.30077073104,
+        -0.787761107477,
+        0.134054164127,
+        -0.275921142109,
+        0.213504361167,
+        -0.23303059433,
+        -0.459468716608,
+        -0.105554369781,
+        -0.313871182867,
+        -0.803767421218
+      ],
+      [
+        -1.724536513754,
+        2.56045787305,
+        -1.15637631684,
+        0.149284173288,
+        0.095221923332,
+        -0.209217331253,
+        0.25707964691,
+        0.337223593196,
+        -0.027512281326,
+        0.241453065977,
+        0.481913969846
+      ],
+      [
+        -1.918313315806,
+        -1.25968714201,
+        1.944137424316,
+        -0.283338337415,
+        0.180699218777,
+        -0.004287029914,
+        -0.02404905258,
+        0.122245123412,
+        0.133066651107,
+        0.07241811689,
+        0.321853451372
+      ]
+    ],
+    "intercept": [
+      -2.06488230845,
+      1.757388501378,
+      0.307493807072
+    ],
+    "solver": "lbfgs",
+    "type": "multinomial_logistic_regression"
+  },
+  "sample_summary": {
+    "calibration_rows_after_sequence_deduplication": 1387,
+    "class_counts": {
+      "arch": 190,
+      "bact": 813,
+      "euk": 384
+    }
+  },
+  "scaler": {
+    "mean": [
+      58.730230713771,
+      68.432480173035,
+      64.558976207642,
+      69.927051189618,
+      0.986386445566,
+      0.987043258832,
+      0.987340302812,
+      0.988120403749,
+      9.645760634463,
+      -3.42741888969,
+      76.642393655371
+    ],
+    "scale": [
+      18.856621737846,
+      14.013471087883,
+      14.224161926577,
+      12.813465779856,
+      0.024775049447,
+      0.022248828853,
+      0.024189163457,
+      0.021785790938,
+      7.250310103133,
+      4.691962152336,
+      5.297128716673
+    ],
+    "type": "standard_scaler"
+  },
+  "schema_version": "1.0",
+  "tool_provenance": {
+    "generator": "benchmark/scripts/calibrate_cm_domain_selector.py",
+    "infernal": "# cmalign :: align sequences to a CM\n# INFERNAL 1.1.5 (Sep 2023)\n# Copyright (C) 2023 Howard Hughes Medical Institute.",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sklearn": "1.7.2"
+  },
+  "training_protocol": {
+    "case_protocol": "unique_sequence",
+    "cross_validation": "StratifiedKFold(n_splits=5, shuffle=True)",
+    "deduplication_key": "sequence_sha256",
+    "excluded_source_counts": {
+      "mitochondrial": 341,
+      "virus": 9
+    },
+    "included_sources": {
+      "archaea": "arch",
+      "bacteria": "bact",
+      "chloroplast": "euk",
+      "cyanelle": "bact",
+      "cytosolic_eukaryote": "euk"
+    },
+    "random_state": 20260713,
+    "split": "calibration",
+    "test_split_used": false
+  },
+  "validation_summary": {
+    "accuracy": 0.8666186,
+    "brier_by_class": {
+      "arch": 0.02390179,
+      "bact": 0.08709188,
+      "euk": 0.0768351
+    },
+    "confusion_matrix": [
+      [
+        162,
+        26,
+        2
+      ],
+      [
+        8,
+        746,
+        59
+      ],
+      [
+        6,
+        84,
+        294
+      ]
+    ],
+    "decision_policy": {
+      "abstained_count": 179,
+      "accepted_accuracy": 0.91721854,
+      "accepted_count": 1208,
+      "coverage": 0.87094448
+    },
+    "ece_10_bin": 0.0109105,
+    "log_loss": 0.32492241,
+    "macro_f1": 0.85828807,
+    "multiclass_brier_mean": 0.06260959,
+    "reliability_bins": [
+      {
+        "accuracy": null,
+        "count": 0,
+        "lower": 0.0,
+        "mean_confidence": null,
+        "upper": 0.1
+      },
+      {
+        "accuracy": null,
+        "count": 0,
+        "lower": 0.1,
+        "mean_confidence": null,
+        "upper": 0.2
+      },
+      {
+        "accuracy": null,
+        "count": 0,
+        "lower": 0.2,
+        "mean_confidence": null,
+        "upper": 0.3
+      },
+      {
+        "accuracy": 1.0,
+        "count": 1,
+        "lower": 0.3,
+        "mean_confidence": 0.37462396,
+        "upper": 0.4
+      },
+      {
+        "accuracy": 0.48275862,
+        "count": 29,
+        "lower": 0.4,
+        "mean_confidence": 0.46526063,
+        "upper": 0.5
+      },
+      {
+        "accuracy": 0.53608247,
+        "count": 97,
+        "lower": 0.5,
+        "mean_confidence": 0.54780689,
+        "upper": 0.6
+      },
+      {
+        "accuracy": 0.63793103,
+        "count": 116,
+        "lower": 0.6,
+        "mean_confidence": 0.6535477,
+        "upper": 0.7
+      },
+      {
+        "accuracy": 0.76229508,
+        "count": 122,
+        "lower": 0.7,
+        "mean_confidence": 0.75167211,
+        "upper": 0.8
+      },
+      {
+        "accuracy": 0.84210526,
+        "count": 228,
+        "lower": 0.8,
+        "mean_confidence": 0.85292743,
+        "upper": 0.9
+      },
+      {
+        "accuracy": 0.97732997,
+        "count": 794,
+        "lower": 0.9,
+        "mean_confidence": 0.96815139,
+        "upper": 1.0
+      }
+    ],
+    "scope": "out_of_fold_on_calibration_split"
+  }
+}

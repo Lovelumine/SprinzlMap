@@ -1,0 +1,59 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+runtime_settings.json
+admin_auth.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+
+# JavaScript
+node_modules/
+dist/
+dist-ssr/
+.vite/
+
+# Runtime data and generated artifacts
+.runtime/
+artifacts/
+benchmark/runs/
+benchmark/artifacts/
+logs/
+tmp/
+data/tRNAs_flat.tsv
+data/*.pkl
+
+# Local model weights and caches
+*.pth
+*.pkl
+*.pt
+*.ckpt
+
+# Generated documents and figures
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+
+# Operating-system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the associated manuscript, software release, and data archive."
+type: software
+title: "SprinzlMap: an auditable scientific agent for tRNA Sprinzl-coordinate mapping"
+repository-code: "https://github.com/Lovelumine/SprinzlMap"
+url: "https://github.com/Lovelumine/SprinzlMap"
+abstract: "Auditable scientific-agent software for residue-level Sprinzl-coordinate recovery in tRNAs."
+version: "1.0.0"
+date-released: 2026-10-28
+license: null
+authors:
+  - given-names: Zhuo
+    family-names: Ouyang
+  - given-names: Qiuhui
+    family-names: Wu
+  - given-names: Mengdi
+    family-names: Wang
+  - given-names: Qingyu
+    family-names: Tan
+  - given-names: Ziman
+    family-names: Chen
+  - given-names: Lingling
+    family-names: Zheng
+    orcid: "https://orcid.org/0000-0002-7152-1095"

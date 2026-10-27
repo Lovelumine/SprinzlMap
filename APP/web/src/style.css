@@ -1,0 +1,391 @@
+:root {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+
+  --bg-a: #f8fafb;
+  --bg-b: #edf5f4;
+  --page-bg: #f5f7f9;
+  /* Reading measure for wide working views: it grows with the screen but stops
+     before a row of residues or a paragraph becomes hard to follow. */
+  --content-max: clamp(1360px, 92vw, 1760px);
+
+  --text-strong: #172033;
+  --text-soft: #3d4b5f;
+  --text-muted: #6a778a;
+
+  --border-strong: rgba(30, 41, 59, 0.22);
+  --border-soft: rgba(30, 41, 59, 0.12);
+
+  --surface-1: rgba(255, 255, 255, 0.92);
+  --surface-2: rgba(255, 255, 255, 0.75);
+  --surface-3: rgba(255, 255, 255, 0.55);
+  --surface-dark: rgba(15, 23, 42, 0.92);
+  --overlay-text: #f8fafc;
+  --card-bg-rgb: 255, 255, 255;
+
+  --field-bg: rgba(255, 255, 255, 0.85);
+  --field-border: rgba(30, 41, 59, 0.25);
+  --field-text: #1f2937;
+  --field-placeholder: #6b7280;
+  --field-bg-rgb: 255, 255, 255;
+  --picker-bg: #ffffff;
+
+  --accent: #0f8f8c;
+  --accent-strong: #08706d;
+  --accent-soft: rgba(15, 143, 140, 0.12);
+  --accent-soft-strong: rgba(15, 143, 140, 0.28);
+  --accent-grad: linear-gradient(135deg, #0f8f8c, #0a7a77);
+  --accent-rgb: 15, 143, 140;
+
+  --success: #1f9d68;
+  --success-strong: #15804f;
+  --danger: #d84f4f;
+  --danger-soft: rgba(216, 79, 79, 0.18);
+  --info: #3578c8;
+  --info-strong: #2563a8;
+  --success-rgb: 31, 157, 104;
+  --danger-rgb: 216, 79, 79;
+
+  --nav-bg: rgba(255, 255, 255, 0.72);
+  --nav-text: #172033;
+  --nav-accent: #0f8f8c;
+  --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --nav-text-rgb: 23, 32, 51;
+
+  --toggle-bg: rgba(15, 143, 140, 0.08);
+  --toggle-bg-hover: rgba(15, 143, 140, 0.14);
+  --toggle-border: rgba(15, 143, 140, 0.22);
+  --toggle-border-hover: rgba(15, 143, 140, 0.36);
+
+  --shadow-soft: 0 8px 26px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 12px 32px rgba(2, 6, 23, 0.3);
+
+  --chart-text: rgba(30, 41, 59, 0.8);
+  --chart-grid: rgba(30, 41, 59, 0.2);
+  --chart-band: rgba(15, 23, 42, 0.06);
+  --chart-node: #3b82f6;
+  --chart-node-leaf: #10b981;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-a: #1a2e30;
+    --bg-b: #0f1e20;
+    --page-bg: #111a1c;
+
+    --text-strong: #f0f4f5;
+    --text-soft: #d0dde0;
+    --text-muted: #8fa5aa;
+
+    --border-strong: rgba(148, 163, 184, 0.25);
+    --border-soft: rgba(148, 163, 184, 0.15);
+
+    --surface-1: rgba(18, 28, 30, 0.94);
+    --surface-2: rgba(15, 25, 27, 0.55);
+    --surface-3: rgba(8, 15, 17, 0.35);
+    --surface-dark: rgba(9, 16, 18, 0.92);
+    --overlay-text: #f0f4f5;
+    --card-bg-rgb: 18, 28, 30;
+
+    --field-bg: rgba(9, 16, 18, 0.85);
+    --field-border: rgba(148, 163, 184, 0.4);
+    --field-text: #e5e7eb;
+    --field-placeholder: #a3b0c3;
+    --field-bg-rgb: 9, 16, 18;
+  --picker-bg: #101b1d;
+
+    --accent: #4fd1c5;
+    --accent-strong: #81e6d9;
+    --accent-soft: rgba(79, 209, 197, 0.18);
+    --accent-soft-strong: rgba(79, 209, 197, 0.28);
+    --accent-grad: linear-gradient(135deg, #4fd1c5, #38b2ac);
+    --accent-rgb: 79, 209, 197;
+
+    --success: #34d399;
+    --success-strong: #2ebd8a;
+    --danger: #ff6b6b;
+    --danger-soft: rgba(255, 107, 107, 0.18);
+    --info: #60a5fa;
+    --info-strong: #3b82f6;
+    --success-rgb: 52, 211, 153;
+    --danger-rgb: 255, 107, 107;
+
+    --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --nav-bg: rgba(18, 28, 30, 0.85);
+    --nav-text: #f0f4f5;
+    --nav-accent: #4fd1c5;
+    --nav-text-rgb: 240, 244, 245;
+
+    --toggle-bg: rgba(79, 209, 197, 0.12);
+    --toggle-bg-hover: rgba(79, 209, 197, 0.22);
+    --toggle-border: rgba(79, 209, 197, 0.3);
+    --toggle-border-hover: rgba(79, 209, 197, 0.5);
+
+    --chart-text: rgba(255, 255, 255, 0.85);
+    --chart-grid: rgba(255, 255, 255, 0.2);
+    --chart-band: rgba(255, 255, 255, 0.06);
+    --chart-node: #4fd1c5;
+    --chart-node-leaf: #34d399;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-a: #f8fafb;
+  --bg-b: #edf5f4;
+  --page-bg: #f5f7f9;
+
+  --text-strong: #172033;
+  --text-soft: #3d4b5f;
+  --text-muted: #6a778a;
+
+  --border-strong: rgba(30, 41, 59, 0.22);
+  --border-soft: rgba(30, 41, 59, 0.12);
+
+  --surface-1: rgba(255, 255, 255, 0.92);
+  --surface-2: rgba(255, 255, 255, 0.75);
+  --surface-3: rgba(255, 255, 255, 0.55);
+  --surface-dark: rgba(15, 23, 42, 0.92);
+  --overlay-text: #f8fafc;
+  --card-bg-rgb: 255, 255, 255;
+
+  --field-bg: rgba(255, 255, 255, 0.85);
+  --field-border: rgba(30, 41, 59, 0.25);
+  --field-text: #1f2937;
+  --field-placeholder: #6b7280;
+  --field-bg-rgb: 255, 255, 255;
+  --picker-bg: #ffffff;
+
+  --accent: #0f8f8c;
+  --accent-strong: #08706d;
+  --accent-soft: rgba(15, 143, 140, 0.12);
+  --accent-soft-strong: rgba(15, 143, 140, 0.28);
+  --accent-grad: linear-gradient(135deg, #0f8f8c, #0a7a77);
+  --accent-rgb: 15, 143, 140;
+
+  --success: #1f9d68;
+  --success-strong: #15804f;
+  --danger: #d84f4f;
+  --danger-soft: rgba(216, 79, 79, 0.18);
+  --info: #3578c8;
+  --info-strong: #2563a8;
+  --success-rgb: 31, 157, 104;
+  --danger-rgb: 216, 79, 79;
+
+  --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.72);
+  --nav-text: #172033;
+  --nav-accent: #0f8f8c;
+  --nav-text-rgb: 23, 32, 51;
+
+  --toggle-bg: rgba(15, 143, 140, 0.08);
+  --toggle-bg-hover: rgba(15, 143, 140, 0.14);
+  --toggle-border: rgba(15, 143, 140, 0.22);
+  --toggle-border-hover: rgba(15, 143, 140, 0.36);
+
+  --chart-text: rgba(30, 41, 59, 0.8);
+  --chart-grid: rgba(30, 41, 59, 0.2);
+  --chart-band: rgba(15, 23, 42, 0.06);
+  --chart-node: #3578c8;
+  --chart-node-leaf: #1f9d68;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-a: #1a2e30;
+  --bg-b: #0f1e20;
+  --page-bg: #111a1c;
+
+  --text-strong: #f0f4f5;
+  --text-soft: #d0dde0;
+  --text-muted: #8fa5aa;
+
+  --border-strong: rgba(148, 163, 184, 0.25);
+  --border-soft: rgba(148, 163, 184, 0.15);
+
+  --surface-1: rgba(18, 28, 30, 0.94);
+  --surface-2: rgba(15, 25, 27, 0.55);
+  --surface-3: rgba(8, 15, 17, 0.35);
+  --surface-dark: rgba(9, 16, 18, 0.92);
+  --overlay-text: #f0f4f5;
+  --card-bg-rgb: 18, 28, 30;
+
+  --field-bg: rgba(9, 16, 18, 0.85);
+  --field-border: rgba(148, 163, 184, 0.4);
+  --field-text: #e5e7eb;
+  --field-placeholder: #a3b0c3;
+  --field-bg-rgb: 9, 16, 18;
+  --picker-bg: #101b1d;
+
+  --accent: #4fd1c5;
+  --accent-strong: #81e6d9;
+  --accent-soft: rgba(79, 209, 197, 0.18);
+  --accent-soft-strong: rgba(79, 209, 197, 0.28);
+  --accent-grad: linear-gradient(135deg, #4fd1c5, #38b2ac);
+  --accent-rgb: 79, 209, 197;
+
+  --success: #34d399;
+  --success-strong: #2ebd8a;
+  --danger: #ff6b6b;
+  --danger-soft: rgba(255, 107, 107, 0.18);
+  --info: #60a5fa;
+  --info-strong: #3b82f6;
+  --success-rgb: 52, 211, 153;
+  --danger-rgb: 255, 107, 107;
+
+  --nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(18, 28, 30, 0.85);
+  --nav-text: #f0f4f5;
+  --nav-accent: #4fd1c5;
+  --nav-text-rgb: 240, 244, 245;
+
+  --toggle-bg: rgba(79, 209, 197, 0.12);
+  --toggle-bg-hover: rgba(79, 209, 197, 0.22);
+  --toggle-border: rgba(79, 209, 197, 0.3);
+  --toggle-border-hover: rgba(79, 209, 197, 0.5);
+
+  --chart-text: rgba(255, 255, 255, 0.85);
+  --chart-grid: rgba(255, 255, 255, 0.2);
+  --chart-band: rgba(255, 255, 255, 0.06);
+  --chart-node: #4fd1c5;
+  --chart-node-leaf: #34d399;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-strong);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--accent);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  background: transparent;
+  color: var(--text-strong);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--surface-2);
+  color: var(--text-strong);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease,
+    background-color 0.25s ease;
+}
+button:hover {
+  border-color: var(--accent);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(var(--accent-rgb), 0.55);
+  outline-offset: 2px;
+}
+
+html {
+  background: var(--page-bg);
+  overscroll-behavior: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(135deg, var(--bg-a) 0%, var(--bg-b) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+html.admin-root,
+body.admin-root {
+  background: var(--page-bg);
+}
+
+body.admin-root::before {
+  display: none;
+}
+
+/* Dropdown lists. The platform popup is rounded, oversized and ignores the
+   app palette, so opt into the customizable <select> where the engine supports
+   it; browsers without support keep their native popup unchanged. The closed
+   control needs about 24px of right padding to clear the caret. */
+@supports selector(::picker(select)) {
+  select,
+  select::picker(select) {
+    appearance: base;
+  }
+  select {
+    font-family: inherit;
+  }
+  select::picker-icon {
+    content: "";
+    width: 7px;
+    height: 7px;
+    margin-inline-start: 6px;
+    border-right: 1.5px solid var(--text-muted);
+    border-bottom: 1.5px solid var(--text-muted);
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.15s ease;
+  }
+  select:open::picker-icon {
+    transform: rotate(-135deg) translateY(-1px);
+  }
+  select::picker(select) {
+    margin-top: 4px;
+    padding: 4px;
+    border: 1px solid var(--field-border);
+    border-radius: 5px;
+    background: var(--picker-bg);
+    color: var(--field-text);
+    box-shadow: var(--shadow-strong);
+  }
+  option {
+    padding: 7px 10px;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--field-text);
+  }
+  option::checkmark {
+    display: none;
+  }
+  option:checked {
+    background: var(--accent-soft-strong);
+    color: var(--text-strong);
+    font-weight: 600;
+  }
+  option:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: -1px;
+  }
+}

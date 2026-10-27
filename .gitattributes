@@ -1,0 +1,2 @@
+third_party/trnaviz/engine/*.cm binary
+benchmark/runs/**/*.log filter=lfs diff=lfs merge=lfs -text

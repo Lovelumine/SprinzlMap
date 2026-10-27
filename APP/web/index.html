@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/sprinzlmap-mark.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SprinzlMap provides verifiable, nucleotide-level Sprinzl numbering for tRNA sequences." />
+    <title>SprinzlMap | Verifiable tRNA Sprinzl Numbering</title>
+    <style>
+      /* 让根元素和 body 填满，并且都禁止 overscroll */
+      html,
+      body {
+        height: 100%;
+        overscroll-behavior: none;
+      }
+      /* #app 也要撑满全屏 */
+      #app {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

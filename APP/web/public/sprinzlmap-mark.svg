@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">SprinzlMap mark</title>
+  <desc id="desc">A compact cloverleaf coordinate mark</desc>
+  <rect width="64" height="64" rx="8" fill="#17352f"/>
+  <g fill="none" stroke="#79d9b7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 31C20 28 18 13 27 9c7-3 14 2 13 10-1 6-4 9-8 12Z"/>
+    <path d="M31 32c-4-9-17-11-22-3-4 7 2 15 10 14 6-1 9-5 12-11Z"/>
+    <path d="M33 32c4-9 17-11 22-3 4 7-2 15-10 14-6-1-9-5-12-11Z"/>
+    <path d="M32 33v20"/>
+  </g>
+  <g fill="#f5f7f2">
+    <circle cx="32" cy="10" r="2.5"/>
+    <circle cx="10" cy="33" r="2.5"/>
+    <circle cx="54" cy="33" r="2.5"/>
+    <circle cx="32" cy="53" r="2.5"/>
+  </g>
+  <circle cx="32" cy="32" r="4" fill="#f28b66"/>
+</svg>

@@ -1,0 +1,126 @@
+{
+  "DA1110": {
+    "input_length": 76,
+    "output_length": 76,
+    "sequence_exact_match": true,
+    "atoms_cif_pdb_aligned": [
+      1624,
+      1624,
+      1624
+    ],
+    "shared_atoms": 1624,
+    "cif_to_raw_pdb_max_error_A": 0.0,
+    "cif_to_aligned_rigid_fit_rmsd_A": 0.0005022793457204264,
+    "rigid_fit_max_error_A": 0.0008304579394562878,
+    "tail_fit_rmsd_A": 0.0005057484652718122,
+    "tail": [
+      [
+        74,
+        "C"
+      ],
+      [
+        75,
+        "C"
+      ],
+      [
+        76,
+        "A"
+      ]
+    ],
+    "terminal3_mean_plddt": 90.17145161290324,
+    "ptm": 0.63
+  },
+  "DA0940": {
+    "input_length": 77,
+    "output_length": 77,
+    "sequence_exact_match": true,
+    "atoms_cif_pdb_aligned": [
+      1649,
+      1649,
+      1649
+    ],
+    "shared_atoms": 1649,
+    "cif_to_raw_pdb_max_error_A": 0.0,
+    "cif_to_aligned_rigid_fit_rmsd_A": 0.0004933211749450875,
+    "rigid_fit_max_error_A": 0.0008138397758716935,
+    "tail_fit_rmsd_A": 0.0004944787222335077,
+    "tail": [
+      [
+        75,
+        "C"
+      ],
+      [
+        76,
+        "C"
+      ],
+      [
+        77,
+        "A"
+      ]
+    ],
+    "terminal3_mean_plddt": 90.69000000000001,
+    "ptm": 0.51
+  },
+  "DL2150": {
+    "input_length": 84,
+    "output_length": 84,
+    "sequence_exact_match": true,
+    "atoms_cif_pdb_aligned": [
+      1805,
+      1805,
+      1805
+    ],
+    "shared_atoms": 1805,
+    "cif_to_raw_pdb_max_error_A": 0.0,
+    "cif_to_aligned_rigid_fit_rmsd_A": 0.0004958783602934965,
+    "rigid_fit_max_error_A": 0.0008446956379587246,
+    "tail_fit_rmsd_A": 0.0005152371918037691,
+    "tail": [
+      [
+        82,
+        "C"
+      ],
+      [
+        83,
+        "C"
+      ],
+      [
+        84,
+        "A"
+      ]
+    ],
+    "terminal3_mean_plddt": 88.94306451612904,
+    "ptm": 0.58
+  },
+  "DX1480": {
+    "input_length": 74,
+    "output_length": 74,
+    "sequence_exact_match": true,
+    "atoms_cif_pdb_aligned": [
+      1581,
+      1581,
+      1581
+    ],
+    "shared_atoms": 1581,
+    "cif_to_raw_pdb_max_error_A": 0.0,
+    "cif_to_aligned_rigid_fit_rmsd_A": 0.0005015608195936311,
+    "rigid_fit_max_error_A": 0.0008391487402805431,
+    "tail_fit_rmsd_A": 0.0004997054000645435,
+    "tail": [
+      [
+        72,
+        "C"
+      ],
+      [
+        73,
+        "A"
+      ],
+      [
+        74,
+        "A"
+      ]
+    ],
+    "terminal3_mean_plddt": 92.2834375,
+    "ptm": 0.53
+  }
+}
